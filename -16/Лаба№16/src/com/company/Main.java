@@ -11,7 +11,7 @@ interface Charging380V{
     public void ChargOff();
 }
 
-class Charging220V implements BasicChargingBasicCharging{
+class Charging220V implements BasicCharging{
     final public int charge = 100;
 
     @Override
@@ -71,14 +71,14 @@ class ChargAdapter implements BasicCharging{
 
 class Charging{
     private BasicCharging device;
-    public Charging( BasicChargingdevice){
+    public Charging( BasicCharging device){
         this.device = device;
     }
 
     public void work(){
-        device.();
-        device.();
-        device.();
+        device.Have();
+        device.ChargOn();
+        device.ChargOff();
     }
 
 }
